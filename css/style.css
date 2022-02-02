@@ -1,0 +1,520 @@
+/* Vairis Kovels, vk21134 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5ab963;
+    --primary-dark: #48944f;
+    --ibm-font: "IBM Plex Mono", sans-serif;
+    --dark-color: #0a0e1a;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+/* Hero Section */
+.hero.home {
+    height: 70vh;
+    background: #0a0e1a url("../img/hero.jpg") no-repeat center center/cover;
+}
+
+.hero, .nav a{
+    color: #fff;
+}
+
+.nav {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.nav nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav li {
+    margin-right: 2rem;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav li a:hover, #footer ol a:hover {
+    color: var(--primary-color);
+    transition: color 0.15s;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+/* Section A */
+#section-a {
+    height: 60vh;
+}
+
+#section-a .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+#section-a .section-header {
+    margin-bottom: 90px;
+}
+
+#section-a .collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.collection .card {
+    padding: 40px 40px;
+    border: 1px solid #f7f7f7;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 0 rgb(87 87 87 / 10%);
+}
+
+.card .card-icon {
+    color: var(--primary-color);
+}
+
+.card .card-icon, .card .card-title, .card .card-text {
+    margin-bottom: 30px;    
+} 
+
+.card .card-text {
+    font-family: var(--ibm-font);
+    color: #999;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+/* Section B */
+#section-b {
+    margin-bottom: 50px;
+}
+
+#section-b .container {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#section-b img {
+    align-items: center;
+    margin-bottom: 115px;
+}
+
+#section-b .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+#section-b .collection {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    width: 90%;
+}
+
+#section-b .card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#section-b .card-info {
+    padding: 2rem;
+}
+
+#section-b .card-price-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#section-b .card-price-block .price {
+    font-size: 72px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+#section-b .card-price-block .currency {
+    transform: translateY(20px);
+    color: #999;
+}
+
+#section-b .card-text {
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 25px;
+}
+
+#section-b .card-list {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+#section-b .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Section C */
+#section-c .container {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section-c .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#section-c .row-reverse {
+    flex-direction: row-reverse;
+}
+
+#section-c img {
+    width: 40%;
+    margin: 0 5.5rem;
+}
+
+#section-c .section-header {
+    width: 30%;
+}
+
+#section-c p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999;
+    margin-top: 1rem;
+}
+
+#section-c .row.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+}
+
+#section-c .more-row {
+    display: none;
+    flex-direction: row;
+    margin-top: 4rem;
+}
+
+#section-c .more-number {
+    font-weight: 600;
+    margin-bottom: .7rem;
+}
+
+#section-c .more-title {
+    font-weight: 900;
+    font-size: 22px;
+    margin-bottom: .7rem;
+}
+
+#section-c .more-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #b3b3b3;
+    font-family: var(--ibm-font);
+}
+
+#section-c .link {
+    font-size: 12px;
+}
+
+#section-d .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#section-d .col-1 {
+    width: 80%;
+}
+
+#section-d .col-1 .header, #reservation-header .header {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#section-d .col-1 p {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Footer */
+#footer {
+    height: 30vh;
+}
+
+#footer .container {
+    padding: 100px 250px 0 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer h2, #footer a {
+    color: #fff;
+}
+
+#footer p {
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: .75rem;
+}
+
+#footer ol {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Reservation Page */
+.hero.reservation {
+    height: 60vh;
+}
+
+#reservation-header .hero-content {
+    align-items: flex-start;
+    width: 60%;
+}
+
+#reservation-header .hero-content .header {
+    font-weight: 600;
+}
+
+#reservation-header p {
+    margin-bottom: 0;
+}
+
+#reservation-header .hero-content .line {
+    color: #fff;
+}
+
+#reservation-header .nav a:hover {
+    color: #fff;
+}
+
+#reservation-section .container {
+    display: flex;
+    flex-direction: row;
+}
+
+#reservation-section .section-header {
+    width: 32%;
+    margin-right: 3rem;
+}
+
+#reservation-form {
+    width: 40%;
+}
+
+#reservation-form #form {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: .5rem;
+}
+
+#reservation-form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px 0;
+    margin-bottom: 1rem;
+    font-family: "IBM Plex Mono", sans-serif; 
+}
+
+#reservation-form input:hover {
+    border-bottom: 1px solid #000;
+}
+
+#reservation-form input[type='submit'] {
+    border-bottom: none;
+}
+
+#reservation-form input:focus {
+    outline: none;
+    color: #000;
+}
+
+/* Misc */
+.btn {
+    display: inline-block;
+    padding: 13px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    color: #fff;
+  }
+  
+.btn-primary {
+    background: var(--primary-color);
+    padding: 20px 30px;
+    font-weight: 600;
+}
+  
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+  
+.btn-outline {
+    background: none;
+    border: 2px solid #fff;
+}
+  
+.btn-outline:hover {
+    background: #fff;
+    color: #0a0e1a !important;
+}
+  
+.btn-transparent {
+    background: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+  
+.btn-transparent:hover {
+    color: var(--primary-dark);
+}
+  
+.btn-light {
+    background: #fff;
+    color: #000;
+}
+  
+.btn-light:hover {
+    background: #e6e6e6;
+}
+
+.bullet {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    margin-left: 15px;
+    background: #fff;
+}
+
+.ibm-font {
+    font-family: "IBM Plex Mono", sans-serif;
+}
+
+.section-a, .section-c , .section-d, #reservation-section {
+    margin: 120px 60px;
+}
+
+.section-header {
+    width: 50%;
+}
+  
+.section-header h2 {
+    color: #b3b3b3;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.section-header .text-bold {
+    font-weight: 800;
+    color: #0a0e1a;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+}
+
+.bg-dark {
+    background: var(--dark-color);
+}
+
+.bg-white {
+    background: #fff;
+}
+
+@media print {
+    header, footer, #section-d, .btn {
+        display: none;
+    }
+    #section-b {
+        margin-bottom: 50rem;
+    }
+    #section-c .container {
+        border: none;
+    }
+}
